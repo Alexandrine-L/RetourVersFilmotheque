@@ -8,5 +8,19 @@
 
 <h1>Bienvenue</h1>
 
+<table >
+	<tr>
+		<th>Titre</th><th>Sortie</th><th>Durée</th><th>Synopsis</th>
+	</tr>
+	<tr th:each="film: ${listeFilms}">
+	<td th:text="${film.titre}"></td>
+	<td th:text="${film.annee}"></td>
+	<td th:text="${film.duree}"></td>
+	<td th:text="${film.synopsis}"></td>	 	
+	</tr>
+</table>
+
+<a th:href="@{/film/ajouter}">Ajouter un film</a>
+
 </body>
 </html>

@@ -16,17 +16,15 @@ import fr.eni.RetourVersFilmotheque.service.FilmService;
 public class FilmController {
 	
 	private FilmService filmService;
-	
-	/**
-	 * @param filmService the filmService to set
-	 */
-	@Autowired
-	public void setFilmService(FilmService filmService) {
+		
+	public FilmController(FilmService filmService) {
+		super();
 		this.filmService = filmService;
 	}
 
 	@GetMapping("/")
-	public String getAccueil() {
+	public String getAccueil(Model modele) {
+		modele.addAttribute("listeFilms", filmService.getListeFilms());
 		return "index";
 	}
 	
