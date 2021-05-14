@@ -19,16 +19,10 @@ public class StringToGenreConverter implements Converter<String, Genre>{
 	}
 	
 	@Override
-	public Metier convert(String id) {
+	public Genre convert(String id) {
 		Integer theid = Integer.parseInt(id);
 		
-		return service.getMapMetiers().get(theid);
-	}
+		return service.getMapGenres().get(theid);
 
-	@Override
-	public Genre convert(String id) {
-		Integer id = Integer.
-		return null;
 	}
-
 }

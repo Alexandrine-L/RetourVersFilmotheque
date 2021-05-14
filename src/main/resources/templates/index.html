@@ -10,13 +10,14 @@
 
 <table >
 	<tr>
-		<th>Titre</th><th>Sortie</th><th>Durée</th><th>Synopsis</th>
+		<th>Titre</th><th>Sortie</th><th>Durée</th><th>Synopsis</th><th>genre</th>
 	</tr>
 	<tr th:each="film: ${listeFilms}">
 	<td th:text="${film.titre}"></td>
 	<td th:text="${film.annee}"></td>
 	<td th:text="${film.duree}"></td>
-	<td th:text="${film.synopsis}"></td>	 	
+	<td th:text="${film.synopsis}"></td>
+	<td th:text="${film.genre.libelle}"></td>	 		 	
 	</tr>
 </table>
 

@@ -5,8 +5,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Service;
+
 import fr.eni.RetourVersFilmotheque.bo.Genre;
 
+@Service
 public class GenreService {
 	
 	private List<Genre> listeGenres;
